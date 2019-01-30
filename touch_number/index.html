@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Touch Number</title>
+
+    <style>
+        .container {
+            margin: 0px auto;
+            text-align: center;
+            width: 300px;
+        }
+
+        table {
+           border-collapse: collapse;
+           margin: 20px auto;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            border: 1px solid #000;
+            user-select: none;
+        }
+
+        #start {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 28px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.7;
+            margin: 20px auto;
+        }
+        
+        #start:hover {
+            opacity: 1;
+        }
+
+        .hidden {
+            display: none;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="table" class="hidden"></table>
+        <div id="start">Start</div>
+        <div id="timer" class="hidden">00:00.000</div>
+    </div>
+
+
+    <script>
+        const table = document.getElementById('table');
+        const start = document.getElementById('start');
+        const timer = document.getElementById('timer');
+        let panels =[];
+        let startTime;
+        let elapsedTime = 0;
+        let timerId;
+        let count = 1;
+        let num = 4;
+        let panelsSum = num * num; // パネルの合計枚数
+
+        for (let x = 1; x <= panelsSum; x++) {
+            panels.push(x);
+        }
+        // console.log(panels);
+        
+        // 取り出す範囲(箱の中)を末尾から狭める繰り返し
+        for (let y = panels.length - 1; y > 0; y--) {
+            // 乱数生成を使ってランダムに取り出す値を決める
+            let z = Math.floor(Math.random() * (y + 1));
+            //取り出した値と箱の外の先頭の値を交換する
+            let temp = panels[y];
+            panels[y] = panels[z];
+            panels[z] = temp;
+        }
+        // console.log(panels);
+
+        for (let i = 0; i < num; i++) {
+            const tr = document.createElement('tr');
+            for (let j = 0; j < num; j++) {
+                const td = document.createElement('td');
+                //console.log(i * num + j);
+                let n = i * num + j;
+                td.textContent = panels[n];
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+
+        start.addEventListener('click', () => {
+            table.className = '';
+            start.className = 'hidden';
+            timer.className = '';
+            startTime = Date.now();
+            countUp();
+        })
+
+        updateTimerText = () => {
+            let m = Math.floor(elapsedTime / 60000);
+            let s = Math.floor(elapsedTime % 60000 / 1000);
+            let ms = elapsedTime % 1000;
+            m = ('0' + m).slice(-2);
+            s = ('0' + s).slice(-2);
+            ms = ('00' + ms).slice(-3);
+            timer.textContent = m + ':' + s + '.' + ms;
+        }
+        countUp = () => {
+            timerId = setTimeout(() => {
+                elapsedTime = Date.now() - startTime;
+                updateTimerText();
+                countUp();
+            }, 10);
+        }
+
+        table.addEventListener('click', (e) => {
+            let p = e.target;
+            let pNum = Number(p.textContent);
+            if (pNum === count) {
+                p.textContent = '';
+                count++;
+                if (count === panelsSum + 1) {
+                    clearTimeout(timerId);
+                }
+            } else {
+                return;
+            }
+        })
+
+    </script>
+</body>
+</html>

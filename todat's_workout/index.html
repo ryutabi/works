@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todat's Workout</title>
+    
+    <style>
+        .btn{
+            width: 300px;
+            height: 100px;
+            margin: 30px auto;
+            border-radius: 10px;
+            line-height: 100px;
+            font-size: 30px;
+            text-align: center;
+            background-color: #FFDBC9;
+            box-shadow: 0 7px #FFC7AF;
+            user-select: none;
+            opacity: 0.7;
+        }
+
+        .btn:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            position: relative;
+            top: 5px;
+            box-shadow: 0 2px #FFC7AF;
+        }
+
+        #whats, #times, #sets {
+        width: 300px;
+        height: 100px;
+        margin: 30px auto;
+        border-radius: 10px;
+        line-height: 100px;
+        font-size: 30px;
+        text-align: center;
+        background-color: #FFDBC9;
+        box-shadow: 0 8px #FFAD90;
+        user-select: none;
+        opacity: 0.7;
+        }
+
+        #whats:hover, #times:hover, #sets:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        #whats.pushed, #times.pushed, #sets.pushed {
+            box-shadow: 0 3px #FFAD90;
+            position: relative;
+            top: 5px;
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="whats">何を？</div>
+    <div id="times">何回？</div>
+    <div id="sets">何セット？</div>
+
+<script>
+    const whats = document.getElementById("whats");
+    const times = document.getElementById("times");
+    const sets = document.getElementById("sets");
+    const menus = ["プッシュアップ", "スクワット", "アブローラー", "ハンギングツイスト"];
+
+    choiceMenu = () => {
+        let numX = Math.floor(Math.random()*menus.length);
+        whats.textContent = menus[numX];
+        whats.className = 'pushed';
+        whats.removeEventListener('click', choiceMenu)
+    }
+    whats.addEventListener('click', choiceMenu);
+
+    choiceTimes = () => {
+        let numY = Math.floor(Math.random()*(15-10+1)+10);
+        times.textContent = numY + "回";
+        times.className = 'pushed';
+        times.removeEventListener('click', choiceTimes)
+    }
+    times.addEventListener('click', choiceTimes);
+
+    choiceSets = () => {
+        let numZ = Math.floor(Math.random()*(5-3+1)+3);
+        sets.textContent = numZ + "セット";
+        sets.className = 'pushed';
+        sets.removeEventListener('click', choiceSets)
+    }
+    sets.addEventListener('click', choiceSets);
+    
+</script>
+</body>
+</html>

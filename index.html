@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>りゅうたび</title>
+    <title>Ryutabi</title>
 
     <style>
         * {
@@ -24,55 +24,45 @@
             width: 100%;
             background-color: #646464;
             opacity: 0.7;
-            padding-left: 10px;
-            position: fixed;
+            position: absolute;
             top: 0;
             z-index: 10;
-        }
-
-        header p {
-            float: right;
-            text-align: center;
-            font-size: 14px;
-            letter-spacing: 3px;
-            line-height: 15px;
-            /* font-family: 'Snell Roundhand'; */
-            font-weight: bold;
-            padding-right: 15px;
-            padding-top: 3px;
-            color: #fff;
         }
 
         .logo {
             width: 50px;
             float: left;
+            padding: 0 10px;
         }
         
         header li {
             float: left;
-            margin-left: 10px;
+            margin-left: 20px;
             list-style-type: none;
             line-height: 50px;
+            font-size: 20px;
         }
 
-        .heading {
+        header a {
+            color: #fff;
+        }
+
+        .ryutabi {
             background-image: url(myPage/main.jpg);
             background-size: cover;
-            background-position: 0 55%;
-            height: 300px;
-            color: rgb(36, 33, 33);
+            background-position: 0 45%;
+            height: 350px;
         }
 
-        .heading h1 {
-            font-size: 32px;
+        .ryutabi h1 {
+            font-size: 36px;
             text-align: center;
-            letter-spacing: 7px;
+            letter-spacing: 10px;
             padding-top: 60px;
             opacity: 0.8;
         }
 
-        .heading span {
-            /* font-family: 'Zapfino'; */
+        .ryutabi span {
             font-size: 24px;
             letter-spacing: 5px;
         }
@@ -80,6 +70,28 @@
         .works {
             height: 300px;
             background-color: #eee;
+        }
+
+        .heading {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        table h2 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding-left: 5px;
+        }
+        
+        tr p {
+            font-size: 14px;
         }
 
         footer {
@@ -93,6 +105,7 @@
 
 </head>
 <body>
+
     <header>
         <img class="logo" src="myPage/logo.png">
         <nav>
@@ -101,15 +114,53 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <p>Life<br>is<br>Journey</p>
     </header>
-    <section class="heading">
-        <h1>りゅうたび<br><span>Become an engineer</span></h1>
-    </section>
-    <section class="works">
-        <h2>My works</h2>
 
+    <section class="ryutabi">
+        <h1>りゅうたび<br><span>to be an Engineer</span></h1>
     </section>
+
+    <section class="works">
+        <table>
+            <tr><td colspan="3"><h2>My Works</h2></td></tr>
+            <tr class="heading">
+                <td>No.</td>
+                <td>Work</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td><a href="./tic_tac_toe">Tic Tac Toe</a></td>
+                <td><p>◯✕ゲーム</p></td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td><a href="./today's_workout">Today's Workout</a></td>
+                <td><p>筋トレメニューを決めるアプリ</p></td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td><a href="./rock_paper_scissors">Rock Paper Scissors</a></td>
+                <td><p>じゃんけんゲーム</p></td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td><a href="./memory">Memory</a></td>
+                <td><p>神経衰弱ゲーム</p></td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td><a href="./touch_number">Touch Number</a></td>
+                <td><p>1から順番に数字を消していくゲーム</p></td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td><a href="#">Break Out(仮)</a></td>
+                <td><p>ブロック崩しゲーム</p></td>
+            </tr>
+        </table>
+    </section>
+
     <footer>
 
     </footer>
