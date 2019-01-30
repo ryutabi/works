@@ -1,0 +1,146 @@
+
+
+/* mainページ用CSS */
+* {
+    margin: 0;
+}        
+
+body {
+    font-family:  sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #646464;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 50px;
+    float: left;
+    padding: 0 10px;
+}
+
+header li {
+    float: left;
+    padding-left: 20px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+header a {
+    color: #fff;
+}
+
+.ryutabi {
+    background-image: url(my_page/main.jpg);
+    background-size: cover;
+    background-position: 0 45%;
+    height: 350px;
+}
+
+.ryutabi h1 {
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 15px;
+    padding-top: 60px;
+    opacity: 0.8;
+}
+
+.ryutabi span {
+    font-size: 32px;
+    letter-spacing: 12px;
+}
+
+.works {
+    height: 350px;
+    background-color: #eee;
+}
+
+.heading {
+    font-weight: bold;
+    font-style: italic;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding-left: 20px;
+}
+
+tr p {
+    font-size: 14px;
+}
+
+footer {
+    background-image: url(my_page/main.jpg);
+    background-size: cover;
+    background-position: 0 90%;
+    height: 100px;
+    text-align: center;
+}
+
+footer > div {
+    padding-top: 30px;
+}
+
+footer a {
+    padding: 20px;
+    color: #fff;
+}
+
+
+/* aboutページ用CSS */
+.about {
+    background-color: #eee;
+    height: 600px;
+}
+
+.about-wrapper {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.about-left {
+    float: left;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.about-right {
+    float: right;
+}
+
+.myPhoto {
+    width: 100px;
+    padding: 20px;
+}
+
+.english {
+    padding-top: 50px;
+}
+
+.english span {
+    font-style: italic;
+}
