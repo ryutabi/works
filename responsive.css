@@ -1,0 +1,162 @@
+/* スマホ用CSS */
+@media (max-width: 767px) {
+
+    header li {
+        padding-left: 15px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+    .ryutabi {
+        background-position: 40% 0;
+        height: 400px;
+        text-align: center;
+    }
+
+    .ryutabi h1 {
+        font-size: 36px;
+        letter-spacing: 8px;
+        padding-top: 120px;
+        padding-left: 0;
+    }
+
+    .ryutabi span {
+        font-size: 20px;
+        letter-spacing: 8px;
+        padding-left: 10px;
+    }
+
+    .works {
+        height: 400px;
+        font-size: 14px;
+    }
+
+    footer {
+        background-image: url(my_page/main.jpg);
+        background-position: 0 77%;
+        height: 50px;
+        text-align: center;
+    }
+
+    footer > div {
+        padding-top: 10px;
+    }
+
+    footer a {
+        padding: 5px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+
+    .about {
+        height: 750px;
+    }
+    
+    .about-wrapper {
+        width: 80%;
+        padding: 0px;
+        font-size: 12px;
+
+    }
+    
+    .about-left {
+        float: none;
+        padding: 20px 0 40px 0;
+        font-size: 16px;
+    }
+    
+    .about-right {
+        float: none;
+    }
+    
+    .myPhoto {
+        width: 100px;
+    }
+    
+    .english {
+        padding-top: 50px;
+    }
+    
+    .english span {
+        font-style: italic;
+    }
+
+}
+
+
+
+/* タブレット用CSS */
+@media (min-width: 768px) and (max-width: 1000px) {
+
+    .ryutabi {
+        height: 400px;
+    }    
+
+    .ryutabi h1 {
+        font-size: 45px;
+        letter-spacing: 8px;
+        padding-top: 130px;
+        padding-left: 35%;
+    }
+
+    .ryutabi span {
+        font-size: 24px;
+        letter-spacing: 10px;
+        padding-left: 40px;
+    }
+
+    footer {
+        background-position: 0 76%;
+        height: 100px;
+        text-align: center;
+    }
+    
+    footer > div {
+        padding-top: 40px;
+        padding-left: 30%;
+        font-size: 16px;
+    }
+    
+    footer a {
+        padding: 15px;
+        color: #fff;
+    }
+
+
+    .about {
+        height: 650px;
+    }
+    
+    .about-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    
+    .about-left {
+        float: left;
+        text-align: center;
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    
+    .about-right {
+        float: right;
+        width: 70%;
+    }
+    
+    .myPhoto {
+        width: 100px;
+        padding: 20px;
+    }
+    
+    .english {
+        padding-top: 50px;
+    }
+    
+    .english span {
+        font-style: italic;
+    }
+
+}
