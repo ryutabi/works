@@ -42,8 +42,7 @@ li {
     opacity: 0.9;
 }
 
-/* mainページ用CSS */
-#main {
+#main, #home, #about {
     display: none;
 }
 

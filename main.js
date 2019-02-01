@@ -1,7 +1,13 @@
-$('#opening-wrapper').fadeIn(1500);
-setTimeout(type, 1500);
-setTimeout(fadeOut, 5500);
-setTimeout(showHome, 7000);
+$(window).on('load', function() {
+    $('#opening-wrapper').fadeIn(1500);
+    setTimeout(type, 1500);
+    setTimeout(fadeOut, 5500);
+    setTimeout(showHome, 7000);
+
+    $('#home').fadeIn(0);
+    $('#about').fadeIn(0);
+
+})
 
 function type() {
     $('#opening').t({
@@ -17,7 +23,3 @@ function type() {
  function showHome() {
     $('#main').fadeIn(1000);
 }
-
-$('home').click(function() {
-    $('#main').fadeIn(1000);
-})
