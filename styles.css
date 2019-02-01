@@ -25,7 +25,7 @@ li {
 #opening-wrapper {
     display: none;
     height: 700px;
-    background-image: url("opening.jpg");
+    background-image: url(my_page/opening.jpg);
     background-size: cover;
     background-position: 0% 60%;
 }
