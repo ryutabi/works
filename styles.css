@@ -42,7 +42,7 @@ li {
     opacity: 0.9;
 }
 
-#main, #home, #about {
+#main {
     display: none;
 }
 
@@ -168,7 +168,7 @@ footer a {
 }
 
 .my-photo {
-    background-image: url(my_page/img_0224.jpg);
+    background-image: url(my_page/IMG_0224.jpg);
     background-size: cover;
     background-position: 30% 0;
     height: 150px;

@@ -4,8 +4,8 @@ $(window).on('load', function() {
     setTimeout(fadeOut, 5500);
     setTimeout(showHome, 7000);
 
-    $('#home').fadeIn(0);
-    $('#about').fadeIn(0);
+    // $('#home').fadeIn(0);
+    // $('#about').fadeIn(0);
 
 })
 
