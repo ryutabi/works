@@ -46,6 +46,7 @@ li {
     display: none;
 }
 
+
 header {
     height: 50px;
     width: 100%;
@@ -166,9 +167,17 @@ footer a {
     float: right;
 }
 
-.myPhoto {
-    width: 100px;
-    padding: 20px;
+.my-photo {
+    background-image: url(my_page/img_0224.jpg);
+    background-size: cover;
+    background-position: 30% 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.my-name {
+    padding-top: 20px;
 }
 
 .english {
