@@ -178,10 +178,15 @@ footer a {
 
 .my-name {
     padding-top: 20px;
+    letter-spacing: 2px;
 }
 
 .english {
     padding-top: 50px;
+}
+
+.english h4 {
+    letter-spacing: 1px;
 }
 
 .english span {
