@@ -2,10 +2,10 @@ $(window).on('load', function() {
     $('#opening-wrapper').fadeIn(1500);
     setTimeout(type, 1500);
     setTimeout(fadeOut, 5500);
-    setTimeout(showHome, 7000);
 
-    // $('#home').fadeIn(0);
-    // $('#about').fadeIn(0);
+    setTimeout(() => {
+        location.href = 'home.html';
+    }, 7500);
 
 })
 
@@ -18,8 +18,4 @@ function type() {
 
  function fadeOut() {
     $('#opening-wrapper').fadeOut(1500);
-}
-
- function showHome() {
-    $('#main').fadeIn(1000);
 }
