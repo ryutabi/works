@@ -14,9 +14,9 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 // ブロック
-const brickRowCount = 3; // 縦ライン
-const brickColumnCount = 6; // 横ライン
-const brickWidth = 75;
+const brickRowCount = 3; // 縦ライン 3
+const brickColumnCount = 6; // 横ライン 6
+const brickWidth = 75; // 75
 const brickHeight = 20;
 const brickPadding = 5;
 const brickOffsetTop = 30;
@@ -25,6 +25,7 @@ const brickOffsetLeft = 2.5;
 let score = 0;
 let lives = 3;
 let count = 1;
+let level = 1;
 
 
 
@@ -79,6 +80,7 @@ function collisionDetection() {
                     
                     // クリアした時の処理（無限化）
                     if((score / 100)/ count === brickRowCount * brickColumnCount) {
+                        count++;
                         // ブロックを再度生成
                         for(let c = 0; c < brickColumnCount; c++) {
                             for(let r = 0; r < brickRowCount; r++) {
@@ -96,8 +98,11 @@ function collisionDetection() {
                             // paddleWidth -= 20;
                             paddleWidth -= 20;
                             fps++;
+                            level++;
+                            if(level === 6) {
+                                level = 'MAX';
+                            }
                         }
-                        count++;
                     }
 
                 }
@@ -152,14 +157,21 @@ function drawBricks() {
 function drawScore() {
     ctx.font = '16px Arial';
     ctx.fillStyle = '#0095dd';
-    ctx.fillText('Score: ' + score, 8, 20);
+    ctx.fillText('Score: ' + score, 10, 20);
+}
+
+// レベルの表示
+function drawLevel() {
+    ctx.font = '16px Arial';
+    ctx.fillStyle = '#0095dd';
+    ctx.fillText('Level: ' + level, canvas.width - 300, 20);
 }
 
 // ライフの表示
 function drawLives() {
     ctx.font = '16px Arial';
     ctx.fillStyle = '#0095dd';
-    ctx.fillText('♡: ' + lives, canvas.width - 65, 20);
+    ctx.fillText('♡: ' + lives, canvas.width - 70, 20);
 } 
 
 
@@ -171,6 +183,7 @@ function draw() {
     drawBricks();
     drawPaddle();
     drawScore();
+    drawLevel();
     drawLives();
     collisionDetection();
 
@@ -191,6 +204,7 @@ function draw() {
             } else {
                 x = canvas.width / 2;
                 y = canvas.height - 30;
+                level = 1;
                 fps = 3;
                 dx = fps;
                 dy = -(fps);
