@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Vue RGBツール</title>
+
+</head>
+<body>
+    <div id="app">
+        <div class="color-code">
+            カラーコード<br><input type="text" :value=changeRGB @click="selectColor" readonly>
+        </div>
+        <ul>
+            <li v-for="color in colors">
+                {{ color.name }}: <input type="number" min="0" max="255" value="255" v-model="color.num">
+                <input type="range" min="0" max="255" value="255" v-model="color.num">
+            </li>
+        </ul>
+        <p>Color Sample</p>
+        <div :style="changeGroundColor" class="color-sample"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
