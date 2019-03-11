@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    text-align: center;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+.common-area {
+    max-width: 110rem;
+}
+
+.top {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.top__logo {
+    font-size: 2.4rem;
+}
+
+.top__navigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.8rem;
+}
+
+.top__navigation li {
+    margin-right: .5rem;
+}
+
+.top__navigation li:last-child {
+    margin-right: 0;
+}
+
+.top__title__container {
+    max-width: 80rem;
+    margin: 1rem auto;
+    padding: 1.6rem;
+}
+
+.top__title__heading {
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    padding: 1.6rem;
+}
+
+.top__title__lead {
+    font-size: 1.5rem;
+}
+
+.top__search__container {
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.top__search__input {
+    width: 95%;
+    border: .5rem solid #ccc;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.4rem;
+}
+
+.top__search__submit {
+    color: #fff;
+    background-color: orange;
+    border-radius: .5rem;
+    width: 28%;
+    padding: 1.6rem;
+    margin: 3rem auto;
+    font-size: 1.6rem;
+}
+
+.top__item__container {
+    max-width: 24rem;
+    margin: 0 auto;
+}
+
+.top__item {
+    font-size: 1.2rem;
+}
+
+.top__item span {
+    font-size: 2rem;
+}
+
+.top__item__description {
+    font-size: 1.25rem;
+}
+
+.top__checkbox__container {
+    font-size: 5rem;
+    padding: 1rem;
+    margin-top: 10rem;
+}
