@@ -26,7 +26,7 @@ a {
 .top {
     background: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.2) 30%, rgb(0, 0, 0, 0.4) 60%, rgb(0, 0, 0, 0.8) 90%, rgb(0, 0, 0, 1)), url('img/back1.jpeg');
     background-size: cover;
-    height: 81vh;
+    height: 77vh;
     color: #fff;
     text-align: center;
 }
@@ -92,9 +92,9 @@ header {
 }
 
 .top__search__input {
-    width: 77%;
+    width: 75%;
     border-radius: .5rem;
-    padding: 1.4rem 0;
+    padding: 1.4rem 1rem;
     font-size: 1.4rem;
 }
 
@@ -217,11 +217,14 @@ header {
     display: inline-block;
 }
 
-.help {
-    height: 42vh;
+.service {
+    height: 38vh;
     background: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1)), url('img/back3.png');
     background-size: cover;
     position: relative;
+    color: #fff;
+    text-align: center;
+    padding-top: 3rem;
 }
 
 .inverted-triangle--color_white {
@@ -234,7 +237,47 @@ header {
     top: -4rem;
 }
 
+.service__title__container {
+    padding: 1.6rem;
+}
 
+.service__title__heading {
+    font-size: 2.8rem;
+    color: #FF773E;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.service__title__lead {
+    font-size: 1.6rem;
+}
+
+.service__item__container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.service__item {
+    width: 33%;
+    font-size: 1.3rem; 
+}
+
+.service__item h3 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.service__item p {
+    width: 68%;
+    margin: 0 auto;
+    padding-bottom: 1.3rem;
+}
+
+.service__item a {
+    color: #FF773E;
+}
 
 
 
