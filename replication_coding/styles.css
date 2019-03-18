@@ -94,7 +94,7 @@ header {
 .top__search__input {
     width: 75%;
     border-radius: .5rem;
-    padding: 1.4rem 1rem;
+    padding: 1.4rem 0;
     font-size: 1.4rem;
 }
 
@@ -283,37 +283,64 @@ header {
 footer {
     height: 100vh;
     position: relative;
+    background: #eee;
 }
 
 .footer__wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 5rem 0;
     border-bottom: .1rem dotted #ccc;
 }
 
-.footer__mobile-app__container {
-    width: 55rem;
+.footer-style {
+    display: flex;
+    justify-content: space-between;
+    max-width: 96rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0 3rem 0;
 }
 
-.footer__mobile-app__container h3 {
+.footer__item__container {
+    max-width: 40rem;
+}
+
+.footer__item__container h3 {
     font-size: 2.2rem;
-    letter-spacing: .1rem;
     font-weight: normal;
-    padding-left: 1.2rem;
+    padding: 1rem 0;
+    opacity: 0.7;
 }
 
-.footer__mobile-app__container p {
-    font-size: 1.4rem;
-    padding-left: 1.2rem;
+.footer__item__container p {
+    font-size: 1.3rem;
+    padding-top: 1rem;
     display: inline-block;
+    opacity: 0.7;
 }
 
 .footer__text__container {
     display: flex;
     align-items: center;
-    width: 45rem;
+    max-width: 45rem;
 }
 .footer__text__container p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    opacity: 0.7;
+}
+
+.footer__item__container input {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.footer__news-letter__submit {
+    float: right;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #FF773E;
+    width: 35%;
+    padding: 1rem 0;
+    border-radius: .3rem;
 }
