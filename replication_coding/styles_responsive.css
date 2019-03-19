@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .ms-f {
+        display: none;
+    }
+
+    .top__title__container {
+        padding: 1rem;
+    }
+
+    .top__search__input {
+        width: 90%;
+        padding: 1rem 0;
+    }
+
+    .top__search__submit {
+        width: 28%;
+    }
+
+    .top__item__container {
+        width: 38%;
+    }
+
+    .footer-style {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer__copyright__container {
+        justify-content: center;
+    }
+
+    .footer__copyright {
+        width: 70%;
+    }
+
+    .footer__copyright img {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
