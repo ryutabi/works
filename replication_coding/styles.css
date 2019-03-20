@@ -90,10 +90,11 @@ header {
 
 .top__search__container {
     margin: 0 auto;
+    width: 78%;
 }
 
 .top__search__input {
-    width: 75%;
+    width: 100%;
     border-radius: .5rem;
     padding: 1.4rem 0;
     font-size: 1.4rem;
@@ -103,7 +104,8 @@ header {
     color: #fff;
     background: #FF773E;
     border-radius: .5rem;
-    width: 20%;
+    border: none;
+    width: auto;
     padding: 1.2rem;
     margin: 3rem auto;
     font-size: 1.6rem;
@@ -116,7 +118,7 @@ header {
 }
 
 .top__item__container {
-    width: 29%;
+    width: 100%;
     margin: 0 auto 15rem;
 }
 
@@ -128,6 +130,8 @@ header {
 .top__item__description {
     font-size: 1.3rem;
     padding-top: .8rem;
+    width: 38%;
+    display: inline-block;
 }
 
 .top__checkbox__container {
@@ -380,7 +384,7 @@ footer {
 }
 
 .footer__copyright {
-    width: 60%;
+    width: 90%;
 }
 
 .footer__copyright img {
@@ -405,4 +409,13 @@ footer {
 
 .back-to-top i {
     width: 4rem;
+}
+
+
+.footer__copyright__help {
+    display: none;
+}
+
+.ms__back-to-top {
+    display: none;
 }

@@ -1,6 +1,7 @@
 .london {
     background: url('img/london.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .amsterdam {
     background: url('img/amsterdam.jpeg');
@@ -10,18 +11,22 @@
 .barcelona {
     background: url('img/barcelona.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .paris {
     background: url('img/paris.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .berlin {
     background: url('img/berlin.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .prague {
     background: url('img/prague.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .roma {
     background: url('img/roma.jpeg');
@@ -31,12 +36,15 @@
 .dublin {
     background: url('img/dublin.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .budapest {
     background: url('img/budapest.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .madrid {
     background: url('img/madrid.jpeg');
     background-size: cover;
+    background-position: center;
 }
